@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Carrinho - R$ {{cart.total}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-avatar item-left>
+
+        </ion-avatar>
+        <ion-item *ngFor="let c of cart.items">
+            <h2>{{c.name}}</h2>
+            <p>R$ {{c.price}}</p>
+        </ion-item>
+    </ion-list>
+    <button ion-button color="default" (click)="goToCheckout()">Finaliza Compra</button>
+</ion-content>
